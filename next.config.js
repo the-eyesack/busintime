@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    reactStrictMode: false,
     async rewrites() {
         return [
             {
@@ -7,8 +8,12 @@ const nextConfig = {
                 destination: 'http://api.prod.obanyc.com/api/siri/vehicle-monitoring.json/:path*'
             },
             {
-                source: '/stopInformation/:path*',
+                source: '/routeInformation/:path*',
                 destination: 'https://bustime.mta.info/api/where/stops-for-route/:path*'
+            },
+            {
+                source: '/stopMonitoring/:path*',
+                destination: 'https://bustime.mta.info/api/siri/stop-monitoring.json/:path*'
             }
         ]
     }
