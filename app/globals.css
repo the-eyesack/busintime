@@ -9,3 +9,8 @@ h1 {
 h2 {
     @apply text-3xl;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

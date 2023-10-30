@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${chonburi.variable} ${noto_sans.variable}`}>
-    <body>
+    <body className={'p-4 overflow-x-hidden'}>
         {children}
       </body>
     </html>
