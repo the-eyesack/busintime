@@ -8,7 +8,7 @@ export default function BusDataDisplay(props) {
         <div>
             <h1 className={'font-display'}>{props.busData.route}</h1>
             <ul>
-                {busData.directions[0].map((bus, index) => {return <li>{bus}</li>})}
+                {busData.directions[0].map((bus:string, index:number) => {return <li key={index}>{bus}</li>})}
             </ul>
         </div>
     )
