@@ -1,5 +1,4 @@
 import './globals.css'
-import {AuthContextProvider} from "@/app/context/AuthContext";
 import { Chonburi, Noto_Sans} from 'next/font/google'
 
 const chonburi = Chonburi({
@@ -24,10 +23,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${chonburi.variable} ${noto_sans.variable}`}>
-    <body>
-      <AuthContextProvider>
+    <body className={'p-4 overflow-x-hidden'}>
         {children}
-      </AuthContextProvider>
       </body>
     </html>
   )
