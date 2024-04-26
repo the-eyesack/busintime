@@ -10,11 +10,9 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 export default function BusForm() {
 	const [busName, setBusName] = useState('') //for form
 
-	const [data, setData] = useState({})
-
 	function translateSBS(route) {
 		if(route == "") {return 'M1'}
-		return route.replace('SBS', '+')
+		return route.replace('SBS', '+').toUpperCase()
 	}
 
 	return (

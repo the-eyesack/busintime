@@ -2,8 +2,6 @@ import StopListing from './StopListing';
 import {useState} from 'react';
 
 export default function RouteDisplay(props) {
-	const [one, setOne] = useState(true);
-	const [two, setTwo] = useState(false);
 
 	return <div>
 		<div className={'flex flex-col gap-y-2'}>
