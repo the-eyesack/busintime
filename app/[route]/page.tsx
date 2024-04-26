@@ -21,7 +21,7 @@ export default function BusDataDisplay({params}: {params: {route: string}}, prop
 	const [activatedDestination, setActivatedDestination] = useState<number>(0) //true=0, false=1
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/${params.route.toUpperCase()}`)
+		fetch(`https://coral-app-o8edf.ondigitalocean.app/${params.route.toUpperCase()}`)
 			.then(res => res.json())
 			.then(data => {
 				console.log(data)

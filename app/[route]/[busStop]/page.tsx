@@ -9,7 +9,7 @@ export default function BusStop({params}:{params: {route: string, busStop: strin
 	const [stopName, setStopName] = useState<string>()
 	const [buses, setBuses] = useState([])
 	useEffect(() => {
-		fetch(`http://localhost:5000/${params.route}/${id}`)
+		fetch(`https://coral-app-o8edf.ondigitalocean.app/${params.route}/${id}`)
 			.then(res => res.json())
 			.then(data => {
 				console.log(data)
