@@ -66,7 +66,7 @@ export default function BusDataDisplay({params}: {params: {route: string}}, prop
 		<section>
 			<div className={'flex flex-col mb-4'}>
 				<div className={'flex w-min'}>
-					<h1 className={'font-display inline-block'}>{params.route.replace('%2B', '+')}</h1>
+					<h1 className={'font-display inline-block'}>{params.route.replace('%2B', ' SBS')}</h1>
 					<BusForm/>
 				</div>
 				<div className={'flex justify-center flex-col border-b-2 pb-2 transition-all'}>

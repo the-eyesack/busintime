@@ -12,11 +12,12 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        display: ['Paytone One', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
+      }
     },
-    fontFamily: {
-        display: ['var(--font-chonburi)'],
-        sans: ['var(--font-noto-sans)'],
-    }
+
   },
   plugins: [],
 }
