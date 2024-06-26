@@ -21,6 +21,7 @@ export default function BusDataDisplay({params}: {params: {route: string}}, prop
 	const [activatedDestination, setActivatedDestination] = useState<number>(0) //true=0, false=1
 
 	useEffect(() => {
+		// fetch(`http://localhost:5000/${params.route.toUpperCase()}`) // local dev
 		fetch(`https://coral-app-o8edf.ondigitalocean.app/${params.route.toUpperCase()}`)
 			.then(res => res.json())
 			.then(data => {
@@ -79,7 +80,7 @@ export default function BusDataDisplay({params}: {params: {route: string}}, prop
 			{error ? <p>{errorMessage}</p> : <div className={'flex justify-evenly'}>
 				<div className={'flex flex-col gap-y-10 lg:flex-row'}>
 
-					{loading ? <Loading/> : <RouteDisplay key={activatedDestination} destination={destinations[activatedDestination]} dir={stops[activatedDestination]} currentStops={currentStops} i={activatedDestination}
+					{loading ? <Loading/> : <RouteDisplay key={activatedDestination} destination={destinations[activatedDestination]} dir={stops[activatedDestination].reverse()} currentStops={currentStops} i={activatedDestination}
 														  route={params.route} ids={ids}/>}
 
 				</div>
